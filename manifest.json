@@ -1,0 +1,31 @@
+{
+  "name": "Martin",
+  "description": "A Extension for Google Chrome.",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "permissions": [
+    "storage","scripting"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "action": {
+    "default_title": "Martin",
+    "default_icon": "assets/icon128.png",
+    "default_popup": "pages/popup.html"
+  },
+  "icons": {
+    "128": "assets/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["js/main.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [ {
+    "resources": [ "js/tools.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
