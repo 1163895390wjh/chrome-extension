@@ -3,26 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script  src="../js/iconfont.js"></script>
+    <script  src="../js/popup.js" defer></script>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0;
+            list-style: none;
         }
+
         .ext-box {
             width: 100px;
             border-radius: 4px;
+            letter-spacing: 2px;
+            /*margin: 100px;*/
+            /*border:1px solid red;*/
+        }
+
+        .ext-box ul li {
+            font-size: 18px;
+            text-align: center;
+            padding: 4px 10px;
+            line-height: 20px;
+        }
+        .ext-box ul li span{
+            color: #333333;
 
         }
-        .ext-box ul li{
-        font-size: 18px;
+
+        .ext-box ul li:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .icon {
+            width: 16px;
+            height: 16px;
+            padding-right: 10px;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
         }
     </style>
 </head>
 <body>
 <div class="ext-box">
     <ul>
-        <li>关&nbsp;&nbsp;&nbsp;&nbsp;于</li>
-        <li>设&nbsp;&nbsp;&nbsp;&nbsp;置</li>
+        <li class="ext-box-btn" ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-zhuyefangzijia"></use></svg><span id="home">首页</span></li>
+        <li class="ext-box-btn" ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-shijianshizhongyuedingyuyue"></use></svg><span id="time">时间</span></li>
+        <li class="ext-box-btn" ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-rilirichengjihuahangcheng"></use></svg><span id="date">日历</span></li>
+        <li class="ext-box-btn" ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-chuizixiufugongju"></use></svg><span id="setting">设置</span></li>
+        <li class="ext-box-btn" ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-naozhongtixingdingshishijian"></use></svg><span id="notice">提醒</span></li>
+        <li class="ext-box-btn" ><svg class="icon" aria-hidden="true"><use xlink:href="#icon-a-wangyuanjingkuitantansuo"></use></svg><span id="about">关于</span></li>
     </ul>
 </div>
 </body>

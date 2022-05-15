@@ -1,6 +1,5 @@
-chrome.runtime.onMessage.addListener(function (msg, _, sendResponse) {
-    console.log(msg, _, sendResponse)
-    const {event} = msg
+chrome.runtime.onMessage.addListener(function (event, _, sendResponse) {
+    // console.log(msg, _, sendResponse)
     switch (event) {
         case 'initAction':
             initHandle( _, sendResponse)
@@ -9,7 +8,12 @@ chrome.runtime.onMessage.addListener(function (msg, _, sendResponse) {
 });
 
 
+
+
 function initHandle( _, sendResponse){
-    console.log(_)
+    // console.log(_)
+
     sendResponse()
+
 }
+
