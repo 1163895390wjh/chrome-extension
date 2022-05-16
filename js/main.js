@@ -39,7 +39,6 @@ async function injectBox() {
 
         subHtmlDivElement.ondrag = (args) => {
             const {x, y} = args
-            console.log('x,y============>',x,y)
             subHtmlDivElement.style.display = 'none'
             subHtmlDivElement.style.top = y - 20 + 'px'
             subHtmlDivElement.style.left = x - 20 + 'px'
@@ -72,7 +71,7 @@ async function injectBox() {
 
 
 chrome.storage.local.get(['flagHostListPosition'], (pos) => {
-    console.log(pos)
+
     if (Object.values(pos).length && pos?.flagHostListPosition) {
 
         let [x, y] = pos.flagHostListPosition
