@@ -34,6 +34,7 @@
     {
       "resources": [
         "js/tools.js",
+        "css/ontextflag.css",
         "js/iconfont.js",
         "js/popup.js"
       ],
