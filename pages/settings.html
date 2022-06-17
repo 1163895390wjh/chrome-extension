@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-hans">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <script src="../js/settings.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #fefefe;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            height: 85vh;
+        }
+
+        .warp {
+            width: 1000px;
+            height: 680px;
+            border: 1px #999 solid;
+            border-radius: 4px;
+            position: relative;
+        }
+
+        .warp .label {
+            font-size: 30px;
+            height: 36px;
+            margin-bottom: 20px;
+            margin-top: 10px;
+            text-align: center;
+            color: #333333;
+        }
+
+        .warp .tr {
+            display: grid;
+            grid-template-columns: 300px 100px 100px 1fr 1fr 120px;
+            justify-content: center;
+            height: 32px;
+            line-height: 32px;
+
+        }
+
+        .warp .tr .td {
+            text-align: center;
+            color: #333333;
+        }
+
+        .warp .tr.title .td {
+            font-size: 20px;
+            height: 36px;
+            line-height: 36px;
+            border-top: 1px solid #ccc;
+        }
+
+        .warp .tr.content .td {
+            height: 32px;
+            line-height: 32px;
+            border-top: 1px solid #ccc;
+        }
+
+
+        .warp .tr .col1,
+        .warp .tr .col2,
+        .warp .tr .col3,
+        .warp .tr .col4,
+        .warp .tr .col5,
+        .warp .tr .col6 {
+            border-right: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+
+        .warp .tr:last-child .td {
+            border-bottom: 1px solid #ccc;
+        }
+
+
+        .warp .footer{
+            display: grid;
+            grid-template-columns: 100px 100px 0;
+            grid-column-gap: 20px;
+            justify-content: end;
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+<div class="warp">
+    <div class="label">设置</div>
+    <div class="content" id="content">
+        <div class="tr title">
+            <span class="td col1">网址</span>
+            <span class="td col2">标签</span>
+            <span class="td col3">默认</span>
+            <span class="td col4">边框颜色</span>
+            <span class="td col5">徽章颜色</span>
+            <span class="td col6">徽章文字</span>
+        </div>
+        <div class="tr context">
+            <span class="td col1">saas.client.dev.ibtool.cn</span>
+            <span class="td col2">dev</span>
+            <span class="td col3">否</span>
+            <span class="td col4">#FFFFFF</span>
+            <span class="td col5">#FFFFFF</span>
+            <span class="td col6">开发</span>
+        </div>
+        <div class="tr context">
+            <span class="td col1">saas.client.dev.ibtool.cn</span>
+            <span class="td col2">dev</span>
+            <span class="td col3">否</span>
+            <span class="td col4">#FFFFFF</span>
+            <span class="td col5">#FFFFFF</span>
+            <span class="td col6">开发</span>
+        </div>
+        <div class="tr context">
+            <span class="td col1">saas.client.dev.ibtool.cn</span>
+            <span class="td col2">dev</span>
+            <span class="td col3">否</span>
+            <span class="td col4">#FFFFFF</span>
+            <span class="td col5">#FFFFFF</span>
+            <span class="td col6">开发</span>
+        </div>
+        <div class="tr context">
+            <span class="td col1">saas.client.dev.ibtool.cn</span>
+            <span class="td col2">dev</span>
+            <span class="td col3">否</span>
+            <span class="td col4">#FFFFFF</span>
+            <span class="td col5">#FFFFFF</span>
+            <span class="td col6">开发</span>
+        </div>
+        <div class="tr context">
+            <span class="td col1">saas.client.dev.ibtool.cn</span>
+            <span class="td col2">dev</span>
+            <span class="td col3">否</span>
+            <span class="td col4">#FFFFFF</span>
+            <span class="td col5">#FFFFFF</span>
+            <span class="td col6">开发</span>
+        </div>
+    </div>
+    <div class="footer">
+        <button>添加</button>
+        <button>保存</button>
+    </div>
+</div>
+</body>
+</html>

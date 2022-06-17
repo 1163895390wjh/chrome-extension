@@ -1,7 +1,7 @@
 document.onreadystatechange = () =>{
     if (document.readyState === "complete"){
         document.querySelector('.ext-box')?.addEventListener('click', function (e) {
-            console.log(e)
+
             const id = getSelection()?.anchorNode?.parentNode?.id
             switch (id) {
                 case 'home':
@@ -14,7 +14,7 @@ document.onreadystatechange = () =>{
                     alert('date')
                     break
                 case 'setting':
-                    alert('setting')
+                    chrome.tabs.create({ url: "pages/settings.html"})
                     break
                 case 'notice':
                     alert('notice')

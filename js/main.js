@@ -101,7 +101,7 @@ function injectToolJS() {
     temp.setAttribute('type', 'text/javascript');
     temp.src = chrome.runtime.getURL('js/tools.js');
     temp.onload = function () {
-        this.parentNode.removeChild(this);
+        this.parentNode?.removeChild(this);
     };
     document.head.appendChild(temp);
     chrome.runtime.sendMessage(null, 'initAction', {}, async function (e, c, b) {
