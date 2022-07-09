@@ -35,6 +35,10 @@ chrome.runtime.onInstalled.addListener(function (object) {
 });
 
 
+chrome.runtime.onUpdateAvailable.addListener(function (object) {
+    console.log('插件有新的版本了')
+})
+
 chrome.runtime.onMessage.addListener(function (event, _, sendResponse) {
     // console.log(msg, _, sendResponse)
     switch (event) {

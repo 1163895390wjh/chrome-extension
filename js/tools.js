@@ -1,4 +1,4 @@
-function injectCC(){
+function injectCC() {
     const old = window.lebron || {}
     const oldEcma = old?.ecma || {}
 
@@ -28,16 +28,30 @@ function injectCC(){
 
 
     }
-    window.cc = window.cc || window.lebron.cc || function () { }
-    window.cj = window.cj || window.lebron.cj || function () { }
+    window.cc = window.cc || window.lebron.cc || function () {
+    }
+    window.cj = window.cj || window.lebron.cj || function () {
+    }
+
+}
+
+function removeUserSelectEvent() {
+    if (window.location.hostname === 'blog.csdn.net') {
+        ;[...document.querySelectorAll('#content_views pre')].forEach(el => {
+            el.style.userSelect = 'unset'
+        })
+        ;[...document.querySelectorAll('#content_views pre code')].forEach(el => {
+            el.style.userSelect = 'unset'
+        })
+    }
 
 }
 
 
+function main() {
+    injectCC()
+    removeUserSelectEvent()
+}
 
 
-
-
-
-
-injectCC()
+main()
