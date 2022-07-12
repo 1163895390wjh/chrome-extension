@@ -1,3 +1,6 @@
+/**
+ * 增加cj函数，展开打印JSON
+ */
 function injectCC() {
     const old = window.lebron || {}
     const oldEcma = old?.ecma || {}
@@ -35,6 +38,9 @@ function injectCC() {
 
 }
 
+/**
+ * 移除CSDN的禁止复制功能
+ */
 function removeUserSelectEvent() {
     if (window.location.hostname === 'blog.csdn.net') {
         ;[...document.querySelectorAll('#content_views pre')].forEach(el => {
