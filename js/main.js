@@ -5,8 +5,10 @@ async function injectBox() {
     const host = window.location.hostname
     // const hostList = JSON.parse(localStorage.getItem('flagHostList'))
 
-
-    const {siteList} = await chrome.storage.local.get(['siteList'])
+    if (location.hostname === 'localhost') {
+        autoCompleteLogin('localhost', '15818787099', 'Ab123456789')
+    }
+    const {siteList} = await chrome.storage.local.get(['siteList']);
     const {bgColorObject} = await chrome.storage.local.get(['bgColorObject'])
 
     for (const item of siteList) {
@@ -118,7 +120,7 @@ function injectToolJS() {
  * @param passwd
  */
 function autoCompleteLogin(site, account, passwd) {
-    if ((site === location.hostname || location.hostname === 'localhost') && /\/login/gi.test(location.pathname)) {
+    if ((site === location.hostname) && /\/login/gi.test(location.pathname)) {
 
         const username = document.querySelector('input[name="username"]')
         const password = document.querySelector('input[name="password"]')
