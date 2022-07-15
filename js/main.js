@@ -15,7 +15,7 @@ async function injectBox() {
             continue
         }
 
-        autoCompleteLogin(item.site,'15818787099','Ab123456789')
+        autoCompleteLogin(item.site, '15818787099', 'Ab123456789')
         const bgo = bgColorObject[item.target]
         let bc = bgo?.boxColor || '#FF00007F'
         let bgc = bgo?.badgeColor || '#FF0000CC'
@@ -117,12 +117,12 @@ function injectToolJS() {
  * @param account
  * @param passwd
  */
-function autoCompleteLogin(site,account , passwd) {
-    if (site === location.hostname && /\/login/gi.test(location.pathname)) {
+function autoCompleteLogin(site, account, passwd) {
+    if ((site === location.hostname || location.hostname === 'localhost') && /\/login/gi.test(location.pathname)) {
 
         const username = document.querySelector('input[name="username"]')
         const password = document.querySelector('input[name="password"]')
-        if (username && password){
+        if (username && password) {
             username.value = account
             username.dispatchEvent(new Event('input'))
             password.value = passwd
